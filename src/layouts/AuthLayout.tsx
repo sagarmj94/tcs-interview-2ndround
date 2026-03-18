@@ -20,7 +20,6 @@ export function AuthLayout() {
           p: 7,
         }}
       >
-        {/* Decorative blobs */}
         <Box
           aria-hidden
           sx={{
@@ -31,7 +30,11 @@ export function AuthLayout() {
           }}
         />
 
-        <Stack spacing={3} sx={{ position: 'relative', maxWidth: 560, height: '100%' }} justifyContent="space-between">
+        <Stack
+          spacing={3}
+          sx={{ position: 'relative', maxWidth: 560, height: '100%' }}
+          justifyContent="space-between"
+        >
           <Stack spacing={2}>
             <Typography variant="h4" fontWeight={800}>
               Accounting,
@@ -39,8 +42,8 @@ export function AuthLayout() {
               automated with Intelligence.
             </Typography>
             <Typography sx={{ opacity: 0.92, maxWidth: 520 }}>
-              Transform your invoice workflow with secure authentication, role-based access control, and a clean
-              dashboard—built with React, TypeScript, and MUI.
+              Trasform your accounting practice with Intelligant automation. Let AI handle the routine while
+              you focus on what matters
             </Typography>
           </Stack>
 
@@ -106,4 +109,3 @@ export function AuthLayout() {
     </Box>
   );
 }
-
