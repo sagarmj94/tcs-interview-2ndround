@@ -16,7 +16,7 @@ describe('invoice utils', () => {
         customerName: 'A',
         amount: 1,
         status: 'Sent',
-        createdAt: '2026-03-01T10:00:00.000Z',
+        createdAt: new Date('2026-03-01T10:00:00.000Z').getTime(),
       },
       {
         id: '2',
@@ -24,7 +24,7 @@ describe('invoice utils', () => {
         customerName: 'B',
         amount: 1,
         status: 'Draft',
-        createdAt: '2026-03-02T10:00:00.000Z',
+        createdAt: new Date('2026-03-02T10:00:00.000Z').getTime(),
       },
       {
         id: '3',
@@ -32,7 +32,7 @@ describe('invoice utils', () => {
         customerName: 'C',
         amount: 1,
         status: 'Draft',
-        createdAt: '2026-03-03T10:00:00.000Z',
+        createdAt: new Date('2026-03-03T10:00:00.000Z').getTime(),
       },
     ];
 
