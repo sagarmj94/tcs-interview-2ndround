@@ -6,12 +6,13 @@ export type Invoice = {
   customerName: string;
   amount: number;
   status: InvoiceStatus;
-  createdAt: string; // ISO
+  // Backend returns epoch milliseconds; Date ctor handles number or string.
+  createdAt: number;
 };
 
 export type InvoiceListResponse = {
   items: Invoice[];
-  total: number;
+  totalCount: number;
   page: number;
   limit: number;
 };

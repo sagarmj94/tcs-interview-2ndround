@@ -4,6 +4,8 @@ export type AuthUser = {
   id: string;
   email: string;
   role: Role;
+  permissions: string[];
+  createdAt: number;
 };
 
 export type LoginRequest = {
@@ -14,9 +16,12 @@ export type LoginRequest = {
 export type SignupRequest = {
   email: string;
   password: string;
+  // Backend supports optional role, defaults to Viewer if omitted.
+  role?: Role;
 };
 
 export type AuthTokenResponse = {
-  accessToken: string;
+  token: string;
+  user: AuthUser;
 };
 

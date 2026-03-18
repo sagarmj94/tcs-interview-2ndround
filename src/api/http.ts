@@ -2,7 +2,7 @@ import axios, { AxiosError, type AxiosInstance, type AxiosRequestConfig } from '
 import { env } from './env';
 import { authStore } from '../store/authStore';
 
-type RefreshResponse = { accessToken: string };
+type RefreshResponse = { token: string };
 
 const baseURL = env.apiBaseUrl ?? '';
 
@@ -33,7 +33,7 @@ function createHttpClient(): AxiosInstance {
           // Refresh uses cookie; no auth header required, but harmless if present.
           headers: { Authorization: undefined },
         })
-        .then((res) => res.data.accessToken)
+        .then((res) => res.data.token)
         .finally(() => {
           refreshPromise = null;
         });

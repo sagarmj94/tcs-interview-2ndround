@@ -25,10 +25,9 @@ export function useLogin() {
 
   return useMutation({
     mutationFn: (payload: LoginRequest) => apiLogin(payload),
-    onSuccess: async (data) => {
-      setAccessToken(data.accessToken);
-      const user = await apiMe();
-      setUser(user);
+    onSuccess: (data) => {
+      setAccessToken(data.token);
+      setUser(data.user);
     },
   });
 }
@@ -39,10 +38,9 @@ export function useSignup() {
 
   return useMutation({
     mutationFn: (payload: SignupRequest) => apiSignup(payload),
-    onSuccess: async (data) => {
-      setAccessToken(data.accessToken);
-      const user = await apiMe();
-      setUser(user);
+    onSuccess: (data) => {
+      setAccessToken(data.token);
+      setUser(data.user);
     },
   });
 }

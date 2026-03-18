@@ -157,7 +157,7 @@ export function InvoiceListPage() {
           columns={columns}
           getRowId={(r) => r.id}
           loading={listQuery.isLoading}
-          rowCount={listQuery.data?.total ?? 0}
+          rowCount={listQuery.data?.totalCount ?? 0}
           paginationMode="server"
           paginationModel={{ page, pageSize }}
           onPaginationModelChange={(m) => {
